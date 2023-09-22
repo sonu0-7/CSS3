@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example ::after</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1::after{
+            content: "Today I'm gonna talk about this topics..";
+            color: green;
+        }
+        h1{
+            color: blue;
+        }
+
+        .curvearrow{
+            margin: 0 auto;
+            position: relative;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-right: 10px solid red;
+            transform: rotate(10deg);
+        }
+        .curvearrow::after{
+            content: "";
+            position: absolute;
+            border: 0 solid transparent;
+            border-top: 3px solid red;
+            border-radius: 20px 0 0;
+            top: -12px;
+            left: -9px;
+            width: 15px;
+            height: 15px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Good Morning Ladies & gentleman. This is me, Sonu.</h1>
+
+    <h2> This is an example of ::after pseudo element </h2>
+
+    <h3>In the first line "Today I'm gonna talk about this topics.." is added using ::before pseudo element. and one thing i can select the html element data but i can't select the pseudo element ::after(content)..</h3>
+
+    <div class="curvearrow"></div>
+
+</body>
+</html>

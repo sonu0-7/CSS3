@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity between id or attribute selector</title>
+
+    <style>
+        body{
+            background-color: lightgrey;
+            font-size: 30px;
+            color: pink;
+        }
+        #abc{
+            background-color: green;
+            color: cyan;
+        }
+        div[id=abc]{
+            background-color: yellow;
+            color: green;
+        }
+
+        .xyz{
+            text-align: center;
+            background-color: chocolate;
+            color: white;
+            font-size: 20px;
+        }
+        div{
+            text-align: center;
+            background-color: pink;
+            color: red;
+            font: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="abc">
+        This is Testinomials ID Vs Attribute selector.
+    </div>
+    <div class="xyz">
+        This is Testinomials for Class Vs elements.
+    </div>
+</body>
+</html>
